@@ -13,9 +13,9 @@
         <! -- my app renders here -->
     </div>
     <div id="app2">
-    
+
     </div>
-        
+
     <script>
         ReactDOM.render(
             React.DOM.h1({
@@ -30,19 +30,19 @@
             document.getElementById("app")
         );
 
-                
+
         var myComponent = React.createClass({
-        
-            render : function() {
-                return React.DOM.span(null, "I'm so custom");
+            render: function () {
+                return React.DOM.span(null, "My name is " + this.props.name);
             }
         });
-        
+
         ReactDOM.render(
-            React.createElement(myComponent),
+            React.createElement(myComponent, {
+                name: "Steve"
+            }),
             document.getElementById("app2")
         );
-
     </script>
 </body>
 
